@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angu-ecommerce"
+  "defaultProject": "angu-ecommerce",
+  "cli": {
+    "analytics": false
+  }
 }
