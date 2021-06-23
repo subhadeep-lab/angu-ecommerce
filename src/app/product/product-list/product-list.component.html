@@ -4,5 +4,11 @@
       <a [routerLink] = "['/product/product-details/' + product.id]"><h4>{{product.name}}</h4></a>
       <h6><i class="fa fa-inr"></i>{{product.Price}}</h6>
       <p>{{product.desc}}</p>
+      <ng-container *ngIf="!product.isAddedToCart">
+        <button (click)="cartActive(product)" type="button" class="btn btn-primary">Add to Cart</button>
+      </ng-container>
+      <ng-container *ngIf="product.isAddedToCart">
+        <button disabled type="button" class="btn btn-primary">Added to Cart</button>
+      </ng-container>
     </div>
   </div>

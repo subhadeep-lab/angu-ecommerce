@@ -33,7 +33,18 @@
                               <a class="nav-link"  [routerLink]="['/product']" >Product</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" [routerLink]="['/cart']" >Cart</a>
+                              <ng-container *ngIf = "cartCount; else elseBlock">
+                                 <a class="nav-link" [routerLink]="['/cart']">Cart {{cartCount}}</a>
+                              </ng-container>
+                              <ng-template #elseBlock>
+                                 <a class="nav-link" [routerLink]="['/cart']">Cart</a>
+                              </ng-template>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link"  [routerLink]="['/my-profile']" >My Profile</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link"  [routerLink]="['/my-orders']" >My Orders</a>
                            </li>
                          </ul>
                          <div class="sign_btn"><a href="#">Sign in</a></div>

@@ -16,6 +16,9 @@ import { TestimonialComponent } from './home/testimonial/testimonial.component';
 import { CallbackComponent } from './home/callback/callback.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { MyOdersComponent } from './my-oders/my-oders.component';
+import { AuthGuard } from './services/auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -30,14 +33,16 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
     TestimonialComponent,
     CallbackComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    MyProfileComponent,
+    MyOdersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,7 +18,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>{{productDetails.model}}</h2>
+              <h2>{{productDetails.model}}</h2> 
             </div>
           </div>
           <div class="col-md-6">
@@ -28,12 +28,13 @@
           </div>
           <div class="col-md-6">
             <div class="left-content" *ngFor="let all of productDetails.details">
-              <h2>Price: <i class="fa fa-inr"></i>{{productDetails.Price}}</h2>
-              <div>Ram: {{all.ram}}</div>
+              <h2>Price: {{productDetails.Price | currency:'INR':'symbol-narrow':'4.2-2'}}</h2>
+              <div>Ram: {{all.ram}}<button type="button" class="btn btn-primary float-right">Add to Cart</button></div>
               <div>Memory: {{all.memory}}</div>
               <div>Hard Disk: {{all.hardDisk}}</div>
               <div>Card: {{all.card}}</div>
               <div>Weight: {{all.Weight}}</div>
+              <div>Start From: {{all.startDate | date: 'dd/MM/yyyy'}}</div>
               <p>{{all.description}}</p>
             </div>
           </div>

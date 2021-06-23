@@ -7,6 +7,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
+              <h4></h4>
+              <h2>Chose The Best</h2>
             </div>
           </div>
         </div>
@@ -21,7 +23,7 @@
             <div class="filters-content">
                 <div class="row grid">
                     <div class="col-lg-4 col-md-4 all des" *ngFor= "let product of products">
-                      <app-product-list [product] = "product"></app-product-list>
+                      <app-product-list (cartAdded) = "addToCart($event)" [product] = "product"></app-product-list>
                     </div>
                 </div>
             </div>

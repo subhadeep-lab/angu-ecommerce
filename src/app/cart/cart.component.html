@@ -1,1 +1,53 @@
-<p>cart works!</p>
+<body>
+    <app-header></app-header>
+    <!-- Page Content -->
+    <div class="page-heading contact-heading header-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-content">
+                <h4></h4>
+                <h2>Your's Choice is Best</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="call-to-action">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <ng-container *ngIf = "cartDetails">
+                <div class="inner-content" *ngFor = "let cart of cartDetails">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h4>{{cart.model}}</h4>
+                      <div>Price: {{cart.Price}}</div>
+                      <p>{{cart.desc}}</p>
+                    </div>
+                    <div class="col-md-4">
+                      <a href="#" class="filled-button">Purchase Now</a>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+              <!-- <div class="inner-content">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="#" class="filled-button">Purchase Now</a>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><br></div>
+    <app-footer></app-footer>
+  </body>
